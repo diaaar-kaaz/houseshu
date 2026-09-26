@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Дом в Щучинске</title>
+<meta name="description" content="Одноэтажный дом 17,4 × 9,2 м: интерьер по комнатам, терраса и фасад, план этажа.">
+<meta property="og:title" content="Дом в Щучинске">
+<meta property="og:description" content="Интерьер по комнатам, терраса и фасад, план этажа.">
+<meta property="og:image" content="thumb/ext/facade-west.jpg">
+<style>
+  :root{
+    --bg:#100f0e; --bg2:#171513; --ink:#f2ece4; --mut:#9c9084; --line:#2a2622;
+    --accent:#c4643c; --gut:20px;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--bg);color:var(--ink);
+       font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",sans-serif;
+       -webkit-font-smoothing:antialiased;overflow-x:hidden}
+  img{display:block;width:100%;height:auto}
+
+  /* --- шапка --- */
+  .hero{position:relative;min-height:min(86vh,760px);display:flex;align-items:flex-end;
+        padding:0 var(--gut) 8vh;overflow:hidden}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+  .hero::after{content:"";position:absolute;inset:0;z-index:1;
+    background:linear-gradient(180deg,rgba(16,15,14,.35) 0%,rgba(16,15,14,.15) 35%,rgba(16,15,14,.92) 100%)}
+  .hero .in{position:relative;z-index:2;max-width:1220px;margin:0 auto;width:100%}
+  h1{font-size:clamp(34px,7vw,76px);font-weight:300;letter-spacing:-.025em;line-height:1.02;margin:0 0 14px}
+  .lead{color:#d6cec4;max-width:44ch;margin:0;font-size:clamp(15px,2.2vw,19px);font-weight:300}
+  .meta{margin:26px 0 0;display:flex;flex-wrap:wrap;gap:10px 26px;color:var(--mut);font-size:14px}
+  .meta b{color:var(--ink);font-weight:500}
+
+  main{max-width:1220px;margin:0 auto;padding:0 var(--gut) 100px}
+  section{padding-top:72px}
+  .h2{display:flex;align-items:baseline;gap:14px;margin:0 0 26px;
+      padding-bottom:12px;border-bottom:1px solid var(--line)}
+  .h2 h2{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);font-weight:500;margin:0}
+  .h2 span{color:#5c554e;font-size:13px;margin-left:auto}
+
+  .grid{display:grid;gap:18px;grid-template-columns:repeat(2,1fr)}
+  .grid.one{grid-template-columns:1fr}
+  figure{margin:0;position:relative;border-radius:14px;overflow:hidden;background:var(--bg2);
+         aspect-ratio:3/2;cursor:zoom-in}
+  figure img{height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1);opacity:0}
+  figure img.on{opacity:1;transition:opacity .5s ease, transform .7s cubic-bezier(.2,.7,.2,1)}
+  figure:hover img{transform:scale(1.03)}
+  figcaption{position:absolute;left:0;right:0;bottom:0;padding:32px 16px 14px;font-size:13px;color:#e8e1d8;
+    background:linear-gradient(180deg,rgba(16,15,14,0),rgba(16,15,14,.8));opacity:0;transition:opacity .3s}
+  figure:hover figcaption{opacity:1}
+
+  .room{padding-top:44px}
+  .room h3{font-size:clamp(20px,3vw,27px);font-weight:400;letter-spacing:-.015em;margin:0 0 4px}
+  .room .a{color:var(--mut);font-size:14px;margin:0 0 18px}
+
+  .plan{background:#17150f;border:1px solid var(--line);border-radius:14px;padding:12px;cursor:zoom-in}
+  .plan img{border-radius:6px}
+
+  footer{border-top:1px solid var(--line);padding:30px var(--gut) 60px;color:#5c554e;font-size:13px}
+  footer div{max-width:1220px;margin:0 auto}
+
+  /* --- лайтбокс --- */
+  dialog{border:0;padding:0;background:rgba(9,8,8,.97);width:100vw;height:100vh;max-width:100vw;max-height:100vh}
+  dialog::backdrop{background:rgba(9,8,8,.96)}
+  dialog img{width:100%;height:100%;object-fit:contain;cursor:zoom-out}
+  .nav{position:fixed;top:50%;transform:translateY(-50%);width:54px;height:54px;border-radius:50%;
+       background:rgba(255,255,255,.08);color:#fff;border:0;font-size:22px;cursor:pointer;z-index:5}
+  .nav:hover{background:rgba(255,255,255,.16)}
+  #prev{left:16px} #next{right:16px}
+  #close{position:fixed;top:16px;right:16px;width:44px;height:44px;border-radius:50%;
+         background:rgba(255,255,255,.08);color:#fff;border:0;font-size:20px;cursor:pointer;z-index:5}
+  #cap{position:fixed;left:0;right:0;bottom:18px;text-align:center;color:#b9b0a6;font-size:13px;z-index:5}
+
+  @media (max-width:720px){
+    :root{--gut:16px}
+    .grid{grid-template-columns:1fr;gap:12px}
+    .hero{min-height:74vh;padding-bottom:6vh}
+    .nav{width:44px;height:44px}
+    figcaption{opacity:1}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img src="img/ext/facade-west.jpg" alt="Дом в Щучинске">
+  <div class="in">
+    <h1>Дом в Щучинске</h1>
+    <p class="lead">Одноэтажный дом на участке 880 м². Интерьер по комнатам, терраса и фасад.</p>
+    <div class="meta">
+      <span><b>17,4 × 9,2 м</b> габарит</span>
+      <span><b>3,0 м</b> потолок</span>
+      <span><b>3</b> спальни</span>
+      <span><b>48,5 м²</b> терраса</span>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section id="ext">
+    <div class="h2"><h2>Снаружи</h2><span>терраса и фасад</span></div>
+    <div class="grid" id="gext"></div>
+  </section>
+
+  <section id="rooms">
+    <div class="h2"><h2>Комнаты</h2><span id="cnt"></span></div>
+    <div id="grooms"></div>
+  </section>
+
+  <section id="plan">
+    <div class="h2"><h2>План этажа</h2><span>17,4 × 9,2 м</span></div>
+    <div class="plan"><img src="img/plan.png" alt="План 1 этажа" loading="lazy"></div>
+  </section>
+</main>
+
+<footer><div>Дом в Щучинске · визуализация интерьера и участка</div></footer>
+
+<dialog id="lb">
+  <img id="lbimg" alt="">
+  <button class="nav" id="prev" aria-label="Назад">‹</button>
+  <button class="nav" id="next" aria-label="Вперёд">›</button>
+  <button id="close" aria-label="Закрыть">✕</button>
+  <div id="cap"></div>
+</dialog>
+
+<script>
+const D = __DATA__;
+const shots = [];   // плоский список для лайтбокса
+
+function card(thumb, full, caption, cls){
+  const i = shots.length;
+  shots.push({full, caption});
+  return `<figure data-i="${i}" class="${cls||''}">
+            <img data-src="${thumb}" alt="${caption}">
+            <figcaption>${caption}</figcaption>
+          </figure>`;
+}
+
+document.getElementById('gext').innerHTML =
+  D.ext.map((e,i) => card(`thumb/ext/${e.file}`, `img/ext/${e.file}`, e.name, i===0?'wide':'')).join('');
+
+document.getElementById('grooms').innerHTML = D.rooms.map(r => `
+  <div class="room">
+    <h3>${r.name}</h3>
+    <p class="a">${r.area}</p>
+    <div class="grid${r.files.length===1?' one':''}">
+      ${r.files.map(f => card(`thumb/rooms/${f}`, `img/rooms/${f}`, r.name)).join('')}
+    </div>
+  </div>`).join('');
+
+document.getElementById('cnt').textContent =
+  D.rooms.length + " комнат · " + D.rooms.reduce((n,r)=>n+r.files.length,0) + " кадров";
+
+/* ленивая загрузка */
+const io = new IntersectionObserver((es) => es.forEach(e => {
+  if (!e.isIntersecting) return;
+  const img = e.target;
+  img.src = img.dataset.src;
+  img.addEventListener('load', () => img.classList.add('on'), {once:true});
+  io.unobserve(img);
+}), {rootMargin:"600px"});
+document.querySelectorAll('figure img[data-src]').forEach(i => io.observe(i));
+
+/* лайтбокс */
+const lb = document.getElementById('lb'), lbimg = document.getElementById('lbimg'),
+      cap = document.getElementById('cap');
+let cur = 0;
+function open(i){
+  cur = (i + shots.length) % shots.length;
+  lbimg.src = shots[cur].full; cap.textContent = shots[cur].caption;
+  if (!lb.open) lb.showModal();
+}
+document.addEventListener('click', e => {
+  const fig = e.target.closest('figure');
+  if (fig) { open(+fig.dataset.i); return; }
+  if (e.target.closest('.plan')) { shots.push({full:"img/plan.png", caption:"План 1 этажа"}); open(shots.length-1); return; }
+});
+document.getElementById('next').onclick = e => { e.stopPropagation(); open(cur+1); };
+document.getElementById('prev').onclick = e => { e.stopPropagation(); open(cur-1); };
+document.getElementById('close').onclick = () => lb.close();
+lbimg.onclick = () => lb.close();
+document.addEventListener('keydown', e => {
+  if (!lb.open) return;
+  if (e.key === 'ArrowRight') open(cur+1);
+  if (e.key === 'ArrowLeft')  open(cur-1);
+});
+</script>
+</body>
+</html>
