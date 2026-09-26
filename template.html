@@ -87,7 +87,7 @@
   <img src="img/ext/facade-west.jpg" alt="Дом в Щучинске">
   <div class="in">
     <h1>Дом в Щучинске</h1>
-    <p class="lead">Одноэтажный дом на участке 880 м². Интерьер по комнатам, терраса и фасад.</p>
+    <p class="lead">Одноэтажный дом на участке 880 м². Трёхмерная модель всех комнат построена по чертежу и сверена с ним; фотореалистичные виды готовятся по ней.</p>
     <div class="meta">
       <span><b>17,4 × 9,2 м</b> габарит</span>
       <span><b>3,0 м</b> потолок</span>
@@ -104,7 +104,7 @@
   </section>
 
   <section id="rooms">
-    <div class="h2"><h2>Комнаты</h2><span id="cnt"></span></div>
+    <div class="h2"><h2>3D-модель по комнатам</h2><span id="cnt"></span></div>
     <div id="grooms"></div>
   </section>
 
@@ -145,7 +145,7 @@ document.getElementById('grooms').innerHTML = D.rooms.map(r => `
     <h3>${r.name}</h3>
     <p class="a">${r.area}</p>
     <div class="grid${r.files.length===1?' one':''}">
-      ${r.files.map(f => card(`thumb/rooms/${f}`, `img/rooms/${f}`, r.name)).join('')}
+      ${r.files.map(f => card(`thumb/rooms3/${f}`, `img/rooms3/${f}`, r.name)).join('')}
     </div>
   </div>`).join('');
 

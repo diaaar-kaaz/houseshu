@@ -6,7 +6,8 @@
    "files": [
     "living-1.jpg",
     "living-2.jpg",
-    "living-3.jpg"
+    "living-3.jpg",
+    "axo-living.jpg"
    ]
   },
   {
@@ -15,7 +16,8 @@
    "files": [
     "kitchen-1.jpg",
     "kitchen-2.jpg",
-    "kitchen-3.jpg"
+    "kitchen-3.jpg",
+    "axo-kitchen.jpg"
    ]
   },
   {
@@ -24,55 +26,26 @@
    "files": [
     "master-1.jpg",
     "master-2.jpg",
-    "master-3.jpg"
+    "master-3.jpg",
+    "axo-master.jpg"
    ]
   },
   {
-   "name": "Спальня",
+   "name": "Спальня 1",
    "area": "11,0 м²",
    "files": [
     "bed1-1.jpg",
-    "bed1-2.jpg"
+    "bed1-2.jpg",
+    "axo-bed1.jpg"
    ]
   },
   {
-   "name": "Спальня",
+   "name": "Спальня 2",
    "area": "11,0 м²",
    "files": [
     "bed2-1.jpg",
-    "bed2-2.jpg"
-   ]
-  },
-  {
-   "name": "Ванная",
-   "area": "5,1 м²",
-   "files": [
-    "bath-1.jpg",
-    "bath-2.jpg"
-   ]
-  },
-  {
-   "name": "Санузел с душевой",
-   "area": "3,5 м²",
-   "files": [
-    "wc-1.jpg",
-    "wc-2.jpg"
-   ]
-  },
-  {
-   "name": "Гардеробная",
-   "area": "4,5 м²",
-   "files": [
-    "wardrobe-1.jpg",
-    "wardrobe-2.jpg"
-   ]
-  },
-  {
-   "name": "Прихожая",
-   "area": "9,1 м²",
-   "files": [
-    "hall-1.jpg",
-    "hall-2.jpg"
+    "bed2-2.jpg",
+    "axo-bed2.jpg"
    ]
   },
   {
@@ -80,22 +53,70 @@
    "area": "8,1 м²",
    "files": [
     "corridor-1.jpg",
-    "corridor-2.jpg"
+    "corridor-2.jpg",
+    "axo-corridor.jpg"
    ]
   },
   {
-   "name": "Постирочная",
+   "name": "Прихожая",
+   "area": "9,1 м²",
+   "files": [
+    "hall-1.jpg",
+    "hall-2.jpg",
+    "axo-hall.jpg"
+   ]
+  },
+  {
+   "name": "Санузел большой",
    "area": "7,0 м²",
    "files": [
     "laundry-1.jpg",
-    "laundry-2.jpg"
+    "laundry-2.jpg",
+    "axo-laundry.jpg"
    ]
   },
   {
-   "name": "Кладовая",
+   "name": "Душевая",
+   "area": "3,5 м²",
+   "files": [
+    "wc-1.jpg",
+    "wc-2.jpg",
+    "axo-wc.jpg"
+   ]
+  },
+  {
+   "name": "Ванная",
+   "area": "5,1 м²",
+   "files": [
+    "bath-1.jpg",
+    "bath-2.jpg",
+    "axo-bath.jpg"
+   ]
+  },
+  {
+   "name": "Гардеробная",
+   "area": "4,5 м²",
+   "files": [
+    "wardrobe-1.jpg",
+    "wardrobe-2.jpg",
+    "axo-wardrobe.jpg"
+   ]
+  },
+  {
+   "name": "Кладовая (гостевая)",
    "area": "4,0 м²",
    "files": [
-    "store-1.jpg"
+    "store-1.jpg",
+    "axo-store.jpg"
+   ]
+  },
+  {
+   "name": "Постирочная-гладильная",
+   "area": "6,5 м²",
+   "files": [
+    "ironing-1.jpg",
+    "ironing-2.jpg",
+    "axo-ironing.jpg"
    ]
   }
  ],

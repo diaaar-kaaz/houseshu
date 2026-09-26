@@ -87,7 +87,7 @@
   <img src="img/ext/facade-west.jpg" alt="Дом в Щучинске">
   <div class="in">
     <h1>Дом в Щучинске</h1>
-    <p class="lead">Одноэтажный дом на участке 880 м². Интерьер по комнатам, терраса и фасад.</p>
+    <p class="lead">Одноэтажный дом на участке 880 м². Трёхмерная модель всех комнат построена по чертежу и сверена с ним; фотореалистичные виды готовятся по ней.</p>
     <div class="meta">
       <span><b>17,4 × 9,2 м</b> габарит</span>
       <span><b>3,0 м</b> потолок</span>
@@ -104,7 +104,7 @@
   </section>
 
   <section id="rooms">
-    <div class="h2"><h2>Комнаты</h2><span id="cnt"></span></div>
+    <div class="h2"><h2>3D-модель по комнатам</h2><span id="cnt"></span></div>
     <div id="grooms"></div>
   </section>
 
@@ -125,7 +125,7 @@
 </dialog>
 
 <script>
-const D = {"rooms": [{"name": "Гостиная-столовая", "area": "32,5 м²", "files": ["living-1.jpg", "living-2.jpg", "living-3.jpg"]}, {"name": "Кухня", "area": "19,0 м²", "files": ["kitchen-1.jpg", "kitchen-2.jpg", "kitchen-3.jpg"]}, {"name": "Спальня родителей", "area": "16,5 м²", "files": ["master-1.jpg", "master-2.jpg", "master-3.jpg"]}, {"name": "Спальня", "area": "11,0 м²", "files": ["bed1-1.jpg", "bed1-2.jpg"]}, {"name": "Спальня", "area": "11,0 м²", "files": ["bed2-1.jpg", "bed2-2.jpg"]}, {"name": "Ванная", "area": "5,1 м²", "files": ["bath-1.jpg", "bath-2.jpg"]}, {"name": "Санузел с душевой", "area": "3,5 м²", "files": ["wc-1.jpg", "wc-2.jpg"]}, {"name": "Гардеробная", "area": "4,5 м²", "files": ["wardrobe-1.jpg", "wardrobe-2.jpg"]}, {"name": "Прихожая", "area": "9,1 м²", "files": ["hall-1.jpg", "hall-2.jpg"]}, {"name": "Коридор", "area": "8,1 м²", "files": ["corridor-1.jpg", "corridor-2.jpg"]}, {"name": "Постирочная", "area": "7,0 м²", "files": ["laundry-1.jpg", "laundry-2.jpg"]}, {"name": "Кладовая", "area": "4,0 м²", "files": ["store-1.jpg"]}], "ext": [{"name": "Главный фасад", "file": "facade-west.jpg"}, {"name": "Терраса — зона отдыха", "file": "terrace-lounge.jpg"}, {"name": "Терраса — обеденная зона", "file": "terrace-dining.jpg"}, {"name": "Вход и въезд", "file": "entrance.jpg"}]};
+const D = {"rooms": [{"name": "Гостиная-столовая", "area": "32,5 м²", "files": ["living-1.jpg", "living-2.jpg", "living-3.jpg", "axo-living.jpg"]}, {"name": "Кухня", "area": "19,0 м²", "files": ["kitchen-1.jpg", "kitchen-2.jpg", "kitchen-3.jpg", "axo-kitchen.jpg"]}, {"name": "Спальня родителей", "area": "16,5 м²", "files": ["master-1.jpg", "master-2.jpg", "master-3.jpg", "axo-master.jpg"]}, {"name": "Спальня 1", "area": "11,0 м²", "files": ["bed1-1.jpg", "bed1-2.jpg", "axo-bed1.jpg"]}, {"name": "Спальня 2", "area": "11,0 м²", "files": ["bed2-1.jpg", "bed2-2.jpg", "axo-bed2.jpg"]}, {"name": "Коридор", "area": "8,1 м²", "files": ["corridor-1.jpg", "corridor-2.jpg", "axo-corridor.jpg"]}, {"name": "Прихожая", "area": "9,1 м²", "files": ["hall-1.jpg", "hall-2.jpg", "axo-hall.jpg"]}, {"name": "Санузел большой", "area": "7,0 м²", "files": ["laundry-1.jpg", "laundry-2.jpg", "axo-laundry.jpg"]}, {"name": "Душевая", "area": "3,5 м²", "files": ["wc-1.jpg", "wc-2.jpg", "axo-wc.jpg"]}, {"name": "Ванная", "area": "5,1 м²", "files": ["bath-1.jpg", "bath-2.jpg", "axo-bath.jpg"]}, {"name": "Гардеробная", "area": "4,5 м²", "files": ["wardrobe-1.jpg", "wardrobe-2.jpg", "axo-wardrobe.jpg"]}, {"name": "Кладовая (гостевая)", "area": "4,0 м²", "files": ["store-1.jpg", "axo-store.jpg"]}, {"name": "Постирочная-гладильная", "area": "6,5 м²", "files": ["ironing-1.jpg", "ironing-2.jpg", "axo-ironing.jpg"]}], "ext": [{"name": "Главный фасад", "file": "facade-west.jpg"}, {"name": "Терраса — зона отдыха", "file": "terrace-lounge.jpg"}, {"name": "Терраса — обеденная зона", "file": "terrace-dining.jpg"}, {"name": "Вход и въезд", "file": "entrance.jpg"}]};
 const shots = [];   // плоский список для лайтбокса
 
 function card(thumb, full, caption, cls){
@@ -145,7 +145,7 @@ document.getElementById('grooms').innerHTML = D.rooms.map(r => `
     <h3>${r.name}</h3>
     <p class="a">${r.area}</p>
     <div class="grid${r.files.length===1?' one':''}">
-      ${r.files.map(f => card(`thumb/rooms/${f}`, `img/rooms/${f}`, r.name)).join('')}
+      ${r.files.map(f => card(`thumb/rooms3/${f}`, `img/rooms3/${f}`, r.name)).join('')}
     </div>
   </div>`).join('');
 
